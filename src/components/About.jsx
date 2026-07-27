@@ -1,3 +1,5 @@
+import fernandaSecondPhoto from "../assets/fernanda-psi.jpeg";
+
 function About() {
 	return (
 		<section className="mx-auto w-full max-w-6xl px-5 pb-6 sm:px-8 lg:px-10 lg:pb-10">
@@ -6,7 +8,7 @@ function About() {
 					<div className="w-full max-w-sm rounded-[2rem] border border-sand-200 bg-sand-50 p-4">
 						<div className="aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-sand-300 bg-sand-100">
 							<img
-								src="/src/assets/foto-fernanda-psi.jpeg"
+								src={fernandaSecondPhoto}
 								alt="Fernanda Gigliolla, Psicanalista"
 								className="h-full w-full object-cover"
 							/>
