@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import {
 	ArrowRight,
 	HeartHandshake,
@@ -59,10 +60,12 @@ function Hero() {
 					<div className="w-full rounded-[2rem] border border-sand-200 bg-sand-50 p-6 shadow-soft sm:p-8">
 						<div className="overflow-hidden rounded-[1.75rem] border border-white/70 bg-gradient-to-br from-sand-100 to-white p-5">
 							<div className="aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-sand-200 bg-sand-100">
-								<img
+								<Image
 									src={fernandaPhoto}
 									alt="Fernanda Gigliolla, Psicanalista"
 									className="h-full w-full object-cover"
+									priority
+									sizes="(max-width: 1024px) 100vw, 40vw"
 								/>
 							</div>
 							<div className="mt-5 space-y-3 text-left">

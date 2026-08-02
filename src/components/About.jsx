@@ -1,3 +1,4 @@
+import Image from "next/image";
 import fernandaSecondPhoto from "../assets/fernanda-psi.jpeg";
 
 function About() {
@@ -7,10 +8,11 @@ function About() {
 				<div className="order-2 flex items-center justify-center lg:order-1">
 					<div className="w-full max-w-sm rounded-[2rem] border border-sand-200 bg-sand-50 p-4">
 						<div className="aspect-[4/5] overflow-hidden rounded-[1.5rem] border border-sand-300 bg-sand-100">
-							<img
+							<Image
 								src={fernandaSecondPhoto}
 								alt="Fernanda Gigliolla, Psicanalista"
 								className="h-full w-full object-cover"
+								sizes="(max-width: 1024px) 100vw, 30vw"
 							/>
 						</div>
 					</div>
