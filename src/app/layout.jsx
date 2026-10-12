@@ -5,16 +5,16 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.gigliollapsi.co
 
 export const metadata = {
 	metadataBase: new URL(siteUrl),
-	title: "Fernanda Gigliolla | Psicanalista",
+	title: "Psicanalista em Sorocaba | Fernanda Gigliolla",
 	description:
-		"Atendimento psicanalítico acolhedor para quem busca autonomia emocional e superação de relacionamentos abusivos.",
-	 alternates: {
+		"Psicanálise em Sorocaba e atendimento online com Fernanda Gigliolla. Um espaço acolhedor para autonomia emocional, escuta e relacionamentos mais saudáveis.",
+	alternates: {
 		canonical: "/",
 	},
 	openGraph: {
-		title: "Fernanda Gigliolla | Psicanalista",
+		title: "Psicanalista em Sorocaba | Fernanda Gigliolla",
 		description:
-			"Atendimento psicanalítico acolhedor para quem busca autonomia emocional e superação de relacionamentos abusivos.",
+			"Psicanálise em Sorocaba e atendimento online com Fernanda Gigliolla.",
 		url: siteUrl,
 		siteName: "Fernanda Gigliolla",
 		locale: "pt_BR",
@@ -22,13 +22,16 @@ export const metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Fernanda Gigliolla | Psicanalista",
+		title: "Psicanalista em Sorocaba | Fernanda Gigliolla",
 		description:
-			"Atendimento psicanalítico acolhedor para quem busca autonomia emocional e superação de relacionamentos abusivos.",
+			"Psicanálise em Sorocaba e atendimento online com Fernanda Gigliolla.",
 	},
 	keywords: [
 		"psicanalista",
+		"psicanalista em Sorocaba",
+		"psicanálise em Sorocaba",
 		"atendimento online",
+		"terapia online em Sorocaba",
 		"autonomia emocional",
 		"relacionamentos abusivos",
 	],
@@ -49,6 +52,16 @@ export default function RootLayout({ children }) {
 						name: "Fernanda Gigliolla",
 						jobTitle: "Psicanalista",
 						url: siteUrl,
+						areaServed: {
+							"@type": "City",
+							name: "Sorocaba",
+							addressCountry: "BR",
+						},
+						knowsAbout: [
+							"Psicanálise",
+							"Autonomia emocional",
+							"Relacionamentos abusivos",
+						],
 						sameAs: ["https://instagram.com/fernanda_gigliolla"],
 					})}
 				</Script>

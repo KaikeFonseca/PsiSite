@@ -34,7 +34,7 @@ function Services({ content = [] }) {
 					Como posso te ajudar
 				</p>
 				<h2 className="text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
-					Uma abordagem simples, elegante e centrada em você
+					Atendimento psicanalítico em Sorocaba e online
 				</h2>
 			</div>
 

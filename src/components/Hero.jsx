@@ -28,11 +28,11 @@ function Hero({ content }) {
 					<div className="space-y-5">
 						<h1 className="max-w-2xl text-4xl font-semibold tracking-tight text-ink sm:text-5xl lg:text-6xl">
 							{getPostField(content, "heroTitle") ||
-								"Liberte-se e reencontre sua própria voz"}
+								"Psicanálise em Sorocaba e atendimento online para reencontrar sua própria voz"}
 						</h1>
 						<p className="max-w-xl text-base leading-7 text-stone-600 sm:text-lg">
 							{getPostField(content, "heroDescription") ||
-								"Um espaço seguro para atravessar momentos difíceis com escuta psicanalítica, cuidado humano e apoio para reconstruir sua autonomia emocional."}
+								"Um espaço seguro para atravessar momentos difíceis com escuta psicanalítica, cuidado humano e apoio para reconstruir sua autonomia emocional, com atendimento para pessoas em Sorocaba e também online."}
 						</p>
 					</div>
 

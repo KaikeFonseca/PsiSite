@@ -32,7 +32,7 @@ function About({ content }) {
 					</h2>
 					<p className="max-w-2xl text-base leading-8 text-stone-600 sm:text-lg">
 						{getPostField(content, "aboutDescription") ||
-							"Sou Fernanda Gigliolla, Psicanalista dedicada a ajudar pessoas a resgatarem sua autonomia emocional, especialmente após vivenciarem relacionamentos abusivos. Estou aqui para te ouvir sem julgamentos."}
+							"Sou Fernanda Gigliolla, psicanalista em Sorocaba, dedicada a ajudar pessoas a resgatarem sua autonomia emocional, especialmente após vivenciarem relacionamentos abusivos. Também ofereço atendimento online, sempre com escuta e sem julgamentos."}
 					</p>
 					<div className="grid gap-4 sm:grid-cols-3">
 						{["Escuta qualificada", "Ambiente seguro", "Cuidado contínuo"].map(
