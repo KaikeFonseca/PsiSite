@@ -41,35 +41,34 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="pt-BR">
 			<body className="antialiased">
-				<Script
-					id="professional-structured-data"
+				<script
 					type="application/ld+json"
-					strategy="beforeInteractive"
-				>
-					{JSON.stringify({
-						"@context": "https://schema.org",
-						"@type": "Person",
-						name: "Fernanda Gigliolla",
-						jobTitle: "Psicanalista",
-						url: siteUrl,
-						areaServed: {
-							"@type": "City",
-							name: "Sorocaba",
-							addressCountry: "BR",
-						},
-						knowsAbout: [
-							"Psicanálise",
-							"Autonomia emocional",
-							"Relacionamentos abusivos",
-						],
-						sameAs: ["https://instagram.com/fernanda_gigliolla"],
-					})}
-				</Script>
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							"@context": "https://schema.org",
+							"@type": "Person",
+							name: "Fernanda Gigliolla",
+							jobTitle: "Psicanalista",
+							url: siteUrl,
+							areaServed: {
+								"@type": "City",
+								name: "Sorocaba",
+								addressCountry: "BR",
+							},
+							knowsAbout: [
+								"Psicanálise",
+								"Autonomia emocional",
+								"Relacionamentos abusivos",
+							],
+							sameAs: ["https://instagram.com/fernanda_gigliolla"],
+						}),
+					}}
+				/>
 				<Script
-					strategy="afterInteractive"
+					strategy="lazyOnload"
 					src="https://www.googletagmanager.com/gtag/js?id=AW-18361193094"
 				/>
-				<Script id="google-ads-gtag" strategy="afterInteractive">
+				<Script id="google-ads-gtag" strategy="lazyOnload">
 					{`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());

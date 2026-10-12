@@ -16,6 +16,7 @@ function About({ content }) {
 								src={imageUrl || fernandaSecondPhoto}
 								alt="Fernanda Gigliolla, Psicanalista"
 								className="h-full w-full object-cover"
+								loading="lazy"
 								sizes="(max-width: 1024px) 100vw, 30vw"
 							/>
 						</div>
