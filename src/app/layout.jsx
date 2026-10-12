@@ -6,6 +6,9 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.gigliollapsi.co
 export const metadata = {
 	metadataBase: new URL(siteUrl),
 	title: "Psicanalista em Sorocaba | Fernanda Gigliolla",
+	verification: {
+		google: "HGtkw1vhu1o3E8Y37zwTeYPWu20x2shsN-quILrofhU",
+	},
 	description:
 		"Psicanálise em Sorocaba e atendimento online com Fernanda Gigliolla. Um espaço acolhedor para autonomia emocional, escuta e relacionamentos mais saudáveis.",
 	alternates: {
