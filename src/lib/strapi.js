@@ -35,6 +35,26 @@ export async function getPosts() {
 	return result?.data || [];
 }
 
+export async function getHomePage() {
+	const query = new URLSearchParams({
+		"populate[heroImage]": "true",
+		"populate[aboutImage]": "true",
+	});
+	const result = await strapiFetch(`/api/home-page?${query}`);
+
+	return result?.data || null;
+}
+
+export async function getServices() {
+	const query = new URLSearchParams({
+		"sort[0]": "order:asc",
+		"pagination[pageSize]": "20",
+	});
+	const result = await strapiFetch(`/api/services?${query}`);
+
+	return result?.data || [];
+}
+
 export async function getPostBySlug(slug) {
 	const query = new URLSearchParams({
 		"filters[slug][$eq]": slug,

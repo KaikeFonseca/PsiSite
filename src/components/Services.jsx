@@ -1,4 +1,5 @@
 import { CircleCheckBig, Globe2, MessageSquareHeart } from "lucide-react";
+import { getPostField } from "../lib/strapi";
 
 const services = [
 	{
@@ -21,7 +22,11 @@ const services = [
 	},
 ];
 
-function Services() {
+const icons = { CircleCheckBig, Globe2, MessageSquareHeart };
+
+function Services({ content = [] }) {
+	const items = content.length > 0 ? content : services;
+
 	return (
 		<section className="mx-auto w-full max-w-6xl px-5 py-6 sm:px-8 lg:px-10 lg:py-10">
 			<div className="space-y-3 text-center">
@@ -34,7 +39,14 @@ function Services() {
 			</div>
 
 			<div className="mt-8 grid gap-5 md:grid-cols-3">
-				{services.map(({ title, description, icon: Icon }) => (
+				{items.map((service, index) => {
+					const title = getPostField(service, "title");
+					const description = getPostField(service, "description");
+					const Icon =
+						icons[getPostField(service, "icon")] ||
+						services[index % services.length].icon;
+
+					return (
 					<article
 						key={title}
 						className="rounded-[1.75rem] border border-sand-200 bg-white/75 p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-clay-500/30"
@@ -47,7 +59,8 @@ function Services() {
 							{description}
 						</p>
 					</article>
-				))}
+					);
+				})}
 			</div>
 		</section>
 	);
