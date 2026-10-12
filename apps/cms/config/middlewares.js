@@ -1,8 +1,16 @@
-module.exports = [
+module.exports = ({ env }) => [
   'strapi::logger',
   'strapi::errors',
   'strapi::security',
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: env.array('CORS_ORIGINS', [
+        'http://localhost:3000',
+        'https://www.gigliollapsi.com',
+      ]),
+    },
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
