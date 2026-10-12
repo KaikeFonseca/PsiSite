@@ -1,8 +1,11 @@
+const configuredStrapiUrl = process.env.STRAPI_URL;
+const isLocalStrapiUrl = configuredStrapiUrl?.includes("localhost");
 const strapiUrl =
-	process.env.STRAPI_URL ||
-	(process.env.NODE_ENV === "production"
-		? "https://psisite-cms.onrender.com"
-		: "http://localhost:1337");
+	configuredStrapiUrl && !(process.env.NODE_ENV === "production" && isLocalStrapiUrl)
+		? configuredStrapiUrl
+		: process.env.NODE_ENV === "production"
+			? "https://psisite-cms.onrender.com"
+			: "http://localhost:1337";
 
 async function strapiFetch(path) {
 	const headers = {};
