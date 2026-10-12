@@ -6,7 +6,10 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "next start"
+		"start": "next start",
+		"cms:dev": "npm --prefix apps/cms run develop",
+		"cms:build": "npm --prefix apps/cms run build",
+		"cms:start": "npm --prefix apps/cms run start"
 	},
 	"dependencies": {
 		"lucide-react": "^0.536.0",

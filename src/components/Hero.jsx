@@ -1,6 +1,5 @@
-"use client";
-
 import Image from "next/image";
+import ConversionLink from "./ConversionLink";
 import {
 	ArrowRight,
 	HeartHandshake,
@@ -10,10 +9,6 @@ import {
 import fernandaPhoto from "../assets/foto-fernanda-psi.jpeg";
 
 const whatsappLink = "https://wa.me/5515991854500";
-
-function handleConversion() {
-	window.gtag_report_conversion?.();
-}
 
 function Hero() {
 	return (
@@ -37,17 +32,16 @@ function Hero() {
 					</div>
 
 					<div className="flex flex-col items-center gap-4 sm:flex-row lg:justify-start">
-						<a
+						<ConversionLink
 							href={whatsappLink}
 							target="_blank"
 							rel="noreferrer"
-							onClick={handleConversion}
 							className="inline-flex w-full items-center justify-center gap-3 rounded-full bg-clay-500 px-7 py-4 text-base font-medium text-white shadow-lg shadow-clay-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-clay-600 sm:w-auto"
 						>
 							<MessageCircle className="h-5 w-5" />
 							Agendar meu Atendimento
 							<ArrowRight className="h-4 w-4" />
-						</a>
+						</ConversionLink>
 						<div className="inline-flex items-center gap-2 text-sm text-stone-500">
 							<HeartHandshake className="h-4 w-4 text-sage-600" />
 							Atendimento online e acolhedor

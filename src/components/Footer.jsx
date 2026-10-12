@@ -1,13 +1,9 @@
-"use client";
-
+import Link from "next/link";
 import { Instagram, MessageCircle } from "lucide-react";
+import ConversionLink from "./ConversionLink";
 
 const whatsappLink = "https://wa.me/5515991854500";
 const instagramLink = "https://instagram.com/fernanda_gigliolla";
-
-function handleConversion() {
-	window.gtag_report_conversion?.();
-}
 
 function Footer() {
 	const year = new Date().getFullYear();
@@ -21,6 +17,12 @@ function Footer() {
 				</div>
 
 				<div className="flex items-center gap-3">
+					<Link
+						href="/blog"
+						className="text-sm font-medium text-stone-600 transition hover:text-clay-600"
+					>
+						Blog
+					</Link>
 					<a
 						href={instagramLink}
 						target="_blank"
@@ -30,16 +32,15 @@ function Footer() {
 					>
 						<Instagram className="h-5 w-5" />
 					</a>
-					<a
+					<ConversionLink
 						href={whatsappLink}
 						target="_blank"
 						rel="noreferrer"
 						aria-label="WhatsApp"
-						onClick={handleConversion}
 						className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-sand-200 bg-sand-50 text-stone-600 transition hover:border-clay-500/30 hover:text-clay-600"
 					>
 						<MessageCircle className="h-5 w-5" />
-					</a>
+					</ConversionLink>
 				</div>
 			</div>
 		</footer>
