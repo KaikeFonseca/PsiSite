@@ -1,6 +1,8 @@
 node_modules/
 .next/
 dist/
+.env.local
+.env.*.local
 apps/cms/.env
 apps/cms/.tmp/
 .DS_Store
